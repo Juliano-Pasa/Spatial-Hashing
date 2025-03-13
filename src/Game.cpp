@@ -6,6 +6,9 @@
 
 namespace spatialhash
 {
+    #define WINDOW_HEIGHT 1000
+    #define WINDOW_WIDTH 1000
+
     Game::Game()
     {
     }
@@ -35,7 +38,7 @@ namespace spatialhash
         glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
         glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
 
-        window = glfwCreateWindow(640, 480, "Window", NULL, NULL);
+        window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Window", NULL, NULL);
         if (!window)
         {
             glfwTerminate();

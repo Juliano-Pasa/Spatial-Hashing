@@ -5,8 +5,11 @@ include_directories(include utils)
 add_executable(SpatialHashing 
     src/main.cpp
     src/glad.c
+    src/curva.cpp
+    src/Plane.cpp
+    src/Game.cpp
     utils/glslprogram.cpp
-    utils/GLUtils.cpp)
+    utils/GLUtils.cpp) 
 
 target_link_libraries(SpatialHashing glfw)
 

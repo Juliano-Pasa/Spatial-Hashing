@@ -40,8 +40,8 @@ namespace spatialhash
 		projectionMatrix = glm::perspective(glm::radians(60.0f), 1.0f, 0.1f, 200.0f);
 	
 		try {
-			shader.compileShader("shaders/Plane.vert");
-			shader.compileShader("shaders/Plane.frag");
+			shader.compileShader("../shaders/Plane.vert");
+			shader.compileShader("../shaders/Plane.frag");
 	
 			shader.link();
 			shader.use();
