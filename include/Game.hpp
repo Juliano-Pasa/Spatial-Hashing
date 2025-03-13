@@ -8,10 +8,9 @@
 
 #include "Plane.hpp"
 
-namespace monotile
+namespace spatialhash
 {
     using namespace std;
-    using namespace monotile;
 
     class Game
     {

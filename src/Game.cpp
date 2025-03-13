@@ -4,7 +4,7 @@
 #include "GLUtils.hpp"
 #include <stdio.h>
 
-namespace monotile
+namespace spatialhash
 {
     Game::Game()
     {
