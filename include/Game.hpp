@@ -6,7 +6,7 @@
 
 #include <GLFW/glfw3.h>
 
-#include "Renderer.hpp"
+#include "Plane.hpp"
 
 namespace monotile
 {
@@ -30,7 +30,7 @@ namespace monotile
         void MainLoop();
 
         GLFWwindow* window;
-        Renderer* renderer;
+        Plane* plane;
     };
 }
 

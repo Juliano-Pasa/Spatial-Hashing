@@ -13,11 +13,12 @@ namespace monotile
     void Game::Start()
     {
         InitializeGLFW();
+        InitializeCallbacks();
         InitializeGLAD();
         InitializeGL();
 
-        renderer = new Renderer(window);
-        renderer->Initialize(3);
+        plane = new Plane(window);
+        plane->Initialize();
 
         MainLoop();
         glfwTerminate();
@@ -58,8 +59,9 @@ namespace monotile
 
     void Game::InitializeGL()
     {
-        glad_glClearColor(0.76f, 0.39f, 0.36f, 1.0f);
+        glad_glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
         glad_glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glad_glEnable(GL_PRIMITIVE_RESTART);
     }
 
     void Game::InitializeCallbacks()
@@ -84,10 +86,10 @@ namespace monotile
             GLUtils::checkForOpenGLError(__FILE__, __LINE__);
 
             thisTime = glfwGetTime();
-            renderer->Update(thisTime - lastTime);
+            plane->Update(thisTime - lastTime);
             lastTime = thisTime;
 
-            renderer->Render();
+            plane->Render();
             glfwSwapBuffers(window);
         }
     }
