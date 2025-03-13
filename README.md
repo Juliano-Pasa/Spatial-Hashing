@@ -4,12 +4,20 @@
 
 This project was based on the paper [A Hash Table Construction Algorithm for Spatial Hashing Based on Linear Memory](https://www.researchgate.net/profile/Per-Gustavsson-2/publication/277870601_A_Hash_Table_Construction_Algorithm_for_Spatial_Hashing_Based_on_Linear_Memory/links/5575840a08ae7521586abaab/A-Hash-Table-Construction-Algorithm-for-Spatial-Hashing-Based-on-Linear-Memory.pdf). It was part of an assignment to implement this algorithm together with other computer graphics techniques.
 
+## Checking Collisions
+
 The program generates a random Bezier curve and random points scattered across a plane. Everytime any point is modified, the hash table has to be regenerated. When using the hash table to check collisions, each segment of the curve access a cell of the hash table and checks collisions only with circles inside this cell. This turns out to be orders of magnitude faster than comparing with all circles, specially if circles are sparsely distributed.
 
 After checking the collisions, the program outputs how much time it took to do it and colors in red all circles that were intercepted by the curve. Increasing curve dimension can mitigate float precision problems when checking collisions.
 
 ![](assets/readme/CollisionsChecked.png)
 ![](assets/readme/CollisionsZoomedIn.png)
+
+## Level of Detail
+
+As the camera moves around the plane, the closer it is, the higher the resolution of the circles. Their resolution is defined by how many vertices they have, with a maximum of 64 vertices when the camera is very close, and a minimum of 4 vertices (a square) when the camera is far away.
+
+![](assets/readme/CircleResolutions.png)
 
 ## Running the project
 
