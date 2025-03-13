@@ -26,6 +26,7 @@ namespace spatialhash
                 vec3 ponto;
                 ponto.x = xt;
                 ponto.y = yt;
+                ponto.z = 0.0f;
     
                 curvePoints.push_back(ponto);
             }
