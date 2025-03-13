@@ -53,7 +53,6 @@ namespace spatialhash
 		}
 	
 		PrintParameters();
-		PrintCommands();
 	
 		glPrimitiveRestartIndex(primitiveRestartIndex);
 		genCurve();
@@ -538,25 +537,5 @@ namespace spatialhash
 		cout << endl << "Hash table parameters" << endl;
 		cout << "Dimension: " << hashDimension << endl;
 		cout << "Cell size: " << maxCoords / hashDimension << endl;
-	}
-	
-	void Plane::PrintCommands()
-	{
-		cout << endl << "Q: Sobe a camera" << endl;
-		cout << "E: Desce a camera" << endl;
-		cout << endl << "W: Anda pra frente" << endl;
-		cout << "S: Anda pra tras" << endl;
-		cout << endl << "D: Anda pra direita" << endl;
-		cout << "A: Anda pra esquerda" << endl;
-		cout << endl << "T: Aumenta 50 pontos" << endl;
-		cout << "G: Diminui 50 pontos" << endl;
-		cout << endl << "Y: Aumenta 50 divisoes da curva" << endl;
-		cout << "H: Diminui 50 divisoes da curva" << endl;
-		cout << endl << "R: Aumenta tamanho dos circulos" << endl;
-		cout << "F: Diminui tamanho dos circulos" << endl;
-		cout << endl << "1: Alterna entre malha e preenchimento" << endl;
-		cout << "2: Faz checagem por forca bruta" << endl;
-		cout << "3: Faz checagem por hash table" << endl;
-		cout << "4: Reinicia pontos" << endl;
 	}
 }
